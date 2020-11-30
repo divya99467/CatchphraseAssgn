@@ -8,14 +8,6 @@
     android:padding="10dp"
     android:background="#ccc">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycle"
-        android:layout_width="409dp"
-        android:layout_height="354dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></androidx.recyclerview.widget.RecyclerView>
-
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -31,14 +23,15 @@
 
             <TextView
                 android:id="@+id/storyTitle"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_width="149dp"
+                android:layout_height="36dp"
                 android:layout_marginStart="48dp"
                 android:layout_marginLeft="48dp"
                 android:layout_marginBottom="8dp"
                 android:text="Name:-cbdcvn"
                 android:textColor="@android:color/black"
                 android:textSize="18sp"
+
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imageView2"
                 app:layout_constraintTop_toTopOf="parent"
@@ -46,14 +39,15 @@
 
             <TextView
                 android:id="@+id/storyContent"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_width="156dp"
+                android:layout_height="24dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="36dp"
                 android:layout_marginRight="36dp"
                 android:layout_marginBottom="8dp"
                 android:maxLength="23"
                 android:text="Catchphrase:-gvgcds"
+                android:textColor="@color/black"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

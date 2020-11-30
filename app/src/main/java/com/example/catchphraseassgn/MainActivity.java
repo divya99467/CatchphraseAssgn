@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 RecyclerView recyclerView;
-Adapter adapter;
+RecyclerView. Adapter progadapter;
 ArrayList<String> items;
 
 
@@ -29,8 +29,14 @@ ArrayList<String> items;
 
         recyclerView = findViewById(R.id.recycle);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        adapter = new Adapter(this,items); // our adapter takes two string array
-        recyclerView.setAdapter(adapter);
+        recyclerView.setHasFixedSize(true);
+        recyclerView = (RecyclerView)findViewById(R.id.recycle);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setHasFixedSize(true);
+        progadapter=new Programadapter(this,items);
+        recyclerView.setAdapter(progadapter);//attach adapter with rec.view
+
+
 
 
 

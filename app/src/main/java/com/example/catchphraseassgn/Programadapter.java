@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -11,12 +12,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class Adapter  extends RecyclerView.Adapter<Adapter.ViewHolder> {
+public class Programadapter  extends RecyclerView.Adapter<Programadapter.ViewHolder> {
     private LayoutInflater layoutInflater;
     private List<String> data;
     private ViewGroup viewGroup;
 
-    Adapter(Context context,List<String>data){
+    Programadapter(Context context,List<String>data){
         this.layoutInflater=LayoutInflater.from(context);
         this.data=data;
 
@@ -30,6 +31,10 @@ public class Adapter  extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        holder.storyTitle.setText(position);//debug error is here
+        holder.storyContent.setText(position);
+        holder.image.setImageResource(position);
+
 
     }
 
@@ -40,11 +45,13 @@ public class Adapter  extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView storyTitle,storyContent;
+        ImageView image;
 
         public ViewHolder(@NonNull View itemView) {
           super(itemView);
           storyTitle=itemView.findViewById(R.id.storyTitle);
           storyContent=itemView.findViewById(R.id.storyContent);
+          image=itemView.findViewById(R.id.imageView2);
       }
   }
 }
